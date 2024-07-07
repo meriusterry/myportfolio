@@ -14,7 +14,7 @@
                     1.
                 </div>
                 <span class="  block text-white-700 text-sm mb-1">October 2023 – Current</span>
-                <span class="block text-white-500 text-sm mb-1">South Africa, Pretoria</span>
+                <span class="block text-white-500 text-sm mb-1">South Africa, Johanesburg</span>
                 <h3 class="text-xl font-bold">Software Engineer Intern</h3>
                 <h4 class="text-lg font-semibold">DIGITAL XPERT</h4>
                 <ul class="list-disc pl-5 mt-2 space-y-1">

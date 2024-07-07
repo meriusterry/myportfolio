@@ -24,3 +24,11 @@ Route::get('/experience', function () {
 Route::get('/more', function () {
     return view('more');
 })->name('more');
+
+Route::get('/skills', function () {
+    return view('skills');
+})->name('skills');
+
+Route::get('/contacts', function () {
+    return view('contacts');
+})->name('contacts');
