@@ -10,7 +10,7 @@
         
    
        
-                    <h2 class="text-2xl font-bold text-yellow-600 border-b-2 border-teal-600 pb-2 mb-4">TECHNICAL SKILLS</h2>
+                    <h2 class="text-2xl font-bold text-yellow-500 border-b-2 border-teal-600 pb-2 mb-4">TECHNICAL SKILLS</h2>
                   
        
                     <span class="bg-blue-500 text-white px-4 py-1 rounded-full">Story telling</span>
@@ -38,7 +38,7 @@
 
                     
                 <div>
-                    <h2 class="text-2xl font-bold text-yellow-600 border-b-2 border-teal-600 pb-2 mb-4">SOFT SKILLS</h2>
+                    <h2 class="text-2xl font-bold text-yellow-500 border-b-2 border-teal-600 pb-2 mb-4">SOFT SKILLS</h2>
 
                         
                         <span class="bg-blue-500 text-white px-4 py-1 rounded-full">Story telling</span>

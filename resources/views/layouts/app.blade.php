@@ -22,12 +22,11 @@
             <img src="{{ asset('storage/mypicture.jpg') }}" class="h-12 w-10 rounded-xl">
         </div>
         <div class="space-x-6 hidden md:flex ml-3 text-lg">
-            <a href="{{ route('welcome') }}" class="hover:underline">About</a>
-
-            <a href="{{ route('education') }}" class="hover:underline">Education</a>
-            <a href="{{ route('experience') }}" class="hover:underline">Experience</a>
-            <a href="{{ route('skills') }}" class="hover:underline">Skills</a>
-            <a href="{{ route('contacts') }}" class="hover:underline">Contacts</a> 
+            <a href="{{ route('welcome') }}" class="hover:underline hover:text-blue-500">About</a>
+            <a href="{{ route('education') }}" class="hover:underline hover:text-blue-500">Education</a>
+            <a href="{{ route('experience') }}" class="hover:underline hover:text-blue-500">Experience</a>
+            <a href="{{ route('skills') }}" class="hover:underline hover:text-blue-500">Skills</a>
+            <a href="{{ route('contacts') }}" class="hover:underline hover:text-blue-500">Contacts</a> 
         </div>
         <div class="space-x-4 hidden md:flex">
             <a href="mailto:meriusterry@gmail.com" target="_blank"><img src="{{ asset('storage/email.jpeg') }}" alt="email" class="h-6 rounded-lg  "></a>
