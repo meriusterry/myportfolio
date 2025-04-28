@@ -2,38 +2,54 @@
 
 @extends('layouts.app')
 
-
-
 @section('content')
-<div class="relative p-10 text-left max-w-3xl z-10">
-    <h1 class="text-4xl md:text-6xl font-bold leading-tight">Hi I am <span class="text-blue-700">Terry Ntuli</span> </h1>
-    <p class="mt-4 text-md md:text-md">A Software Engineer is an IT professional who designs, develops and maintains computer software at a company. 
-        They use their creativity and technical skills and apply the principles of software engineering to help solve new and ongoing problems for an organization.</p>
-    <div id="hidden-info" style="display: none;">
-        <p class="mt-4 text-md md:text-md"> Furthermore, the constant connectivity facilitated by smartphones and social media has blurred the boundaries between work and personal life.
-             Many individuals find themselves constantly checking their devices, which can disrupt family time, relaxation, and sleep patterns. This "always-on" culture can strain relationships, 
-             as individuals struggle to balance their digital and offline lives. You can adjust the CSS to style the hidden information .</p> 
-    </div>
-    <a href="#" id="read-more" class="mt-8 inline-block bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700">Read More</a>
-</div>
+<div class="relative flex flex-col-reverse md:flex-row items-center justify-between px-4 sm:px-6 lg:px-8 py-12 max-w-6xl mx-auto z-10">
     
-
-    
-        <img src="{{ asset('storage/mypicture.jpg') }}" class="absolute right-10 top-12 mt-40 mr-20 w-40 h-70 rounded-lg z-10">
-
-   
-    
-    <script>
-        document.getElementById('read-more').addEventListener('click', function() {
-            var hiddenInfo = document.getElementById('hidden-info');
-            if (hiddenInfo.style.display === 'none') {
-                hiddenInfo.style.display = 'block';
-                this.textContent = 'Read Less'; // Change link text to "Read Less" when expanded
-            } else {
-                hiddenInfo.style.display = 'none';
-                this.textContent = 'Read More'; // Change link text back to "Read More" when collapsed
-            }
-        });
-        </script>
+    <!-- Text Section -->
+    <div class="w-full md:w-1/2 text-center md:text-left">
+        <h1 class="text-3xl sm:text-2xl md:text-6xl font-bold leading-tight">
+            Hi I am <span class="text-blue-700">Merius Ntuli</span>
+        </h1>
         
+        <p class="mt-4 text-base sm:text-md md:text-md">
+            I am a passionate and results-oriented IT professional with a strong foundation in
+            software development, programming, and problem-solving. I am a graduate of
+            Tshwane University of Technology with hands-on experience in web application
+            development. Seeking an entry-level role to apply my technical expertise, contribute
+            to innovative projects, and grow within the IT industry.
+        </p>
+        
+        <!-- Hidden extra info -->
+        <div id="hidden-info" class="mt-4 hidden">
+            <p class="text-base sm:text-md md:text-md">
+                My strengths include full-stack development, UI/UX design, API integration, and agile collaboration. 
+                I am committed to continuous learning, staying up-to-date with the latest industry trends, and delivering high-quality solutions that drive real-world impact. 
+                I am excited to bring my energy, creativity, and strong work ethic to a forward-thinking team.
+            </p> 
+        </div>
+
+        <!-- Read More Button -->
+        <a href="#" id="read-more" class="mt-8 inline-block bg-blue-600 text-white py-2 px-5 rounded-lg hover:bg-blue-700 text-sm sm:text-base">
+            Read More
+        </a>
+    </div>
+
+    <!-- Image Section -->
+  
+
+</div>
+
+<script>
+    document.getElementById('read-more').addEventListener('click', function(e) {
+        e.preventDefault(); // prevent page jump
+        var hiddenInfo = document.getElementById('hidden-info');
+        if (hiddenInfo.classList.contains('hidden')) {
+            hiddenInfo.classList.remove('hidden');
+            this.textContent = 'Read Less';
+        } else {
+            hiddenInfo.classList.add('hidden');
+            this.textContent = 'Read More';
+        }
+    });
+</script>
 @endsection

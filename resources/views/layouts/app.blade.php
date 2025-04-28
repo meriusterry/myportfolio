@@ -11,41 +11,76 @@
         body {
             background-image: url('{{ asset('storage/bb1.jpg') }}');
             background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white mt-4">
+<body class="bg-gray-900 text-white">
 
     <!-- Navigation Bar -->
-    <nav class="bg-white-400 p-2 flex justify-between items-center">
+    <nav class="bg-white bg-opacity-10 backdrop-blur-md p-4 flex justify-between items-center relative">
         <div class="flex items-center space-x-4">
-            <img src="{{ asset('storage/mypicture.jpg') }}" class="h-12 w-10 rounded-xl">
+            <span class="text-xl font-bold">MT Ntuli</span>
         </div>
-        <div class="space-x-6 hidden md:flex ml-3 text-lg">
-            <a href="{{ route('welcome') }}" class="hover:underline hover:text-blue-500">About</a>
-            <a href="{{ route('education') }}" class="hover:underline hover:text-blue-500">Education</a>
-            <a href="{{ route('experience') }}" class="hover:underline hover:text-blue-500">Experience</a>
-            <a href="{{ route('skills') }}" class="hover:underline hover:text-blue-500">Skills</a>
-            <a href="{{ route('contacts') }}" class="hover:underline hover:text-blue-500">Contacts</a> 
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-6 text-md font-bold">
+            <a href="{{ route('welcome') }}" class="hover:underline hover:text-blue-400">About</a>
+            <a href="{{ route('education') }}" class="hover:underline hover:text-blue-400">Education</a>
+            <a href="{{ route('experience') }}" class="hover:underline hover:text-blue-400">Experience</a>
+            <a href="{{ route('skills') }}" class="hover:underline hover:text-blue-400">Skills</a>
+            <a href="{{ route('projects') }}" class="hover:underline hover:text-blue-400">Projects</a>
+            <a href="{{ route('view.Merius_Ntuli_CV') }}" class="hover:underline hover:text-blue-400" target="_blank">Resume</a>
+            <a href="{{ route('contacts') }}" class="hover:underline hover:text-blue-400">Contacts</a>
         </div>
-        <div class="space-x-4 hidden md:flex">
-            <a href="mailto:meriusterry@gmail.com" target="_blank"><img src="{{ asset('storage/email.jpeg') }}" alt="email" class="h-6 rounded-lg  "></a>
-            <a href="tel:+27607577774" target="_blank"><img src="{{ asset('storage/contact.png') }}" alt="email" class="h-6 rounded-lg "></a>
-            <a href="https://www.linkedin.com/in/merius-ntuli-a605a3166" target="_blank"><img src="{{ asset('storage/linkedin.png') }}" alt="LinkedIn" class="h-6 rounded-lg"></a>  
-            <a href="https://wa.me/27607577774" target="_blank"><img src="{{ asset('storage/whatsapp.jpeg') }}" alt="whatsapp" class="h-6 rounded-lg"></a>
-            <a href="https://www.facebook.com/sucre.mt" target="_blank"><img src="{{ asset('storage/facebook.jpeg') }}" alt="Facebook" class="h-6 rounded-lg "></a>
-            <a href="{{ route('download.resume') }}" class="mt-0 inline-block bg-green-500 text-white py-1 px-3 rounded-lg hover:bg-green-700" download>Download Resume</a>
-        </div>
+
+    <!-- Mobile Menu Button -->
+<div class="md:hidden flex items-center">
+    <button id="menu-toggle" class="text-white focus:outline-none">
+        <!-- Hamburger Icon -->
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+    </button>
+</div>
+
+<!-- Mobile Dropdown Menu -->
+<div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-blue-600 py-2 flex flex-col space-y-1 text-center md:hidden">
+    <a href="{{ route('welcome') }}" class="hover:underline hover:text-blue-400" onclick="closeMenu()">About</a>
+    <a href="{{ route('education') }}" class="hover:underline hover:text-blue-400" onclick="closeMenu()">Education</a>
+    <a href="{{ route('experience') }}" class="hover:underline hover:text-blue-400" onclick="closeMenu()">Experience</a>
+    <a href="{{ route('skills') }}" class="hover:underline hover:text-blue-400" onclick="closeMenu()">Projects</a>
+    <a href="{{ route('projects') }}" class="hover:underline hover:text-blue-400" onclick="closeMenu()">Skills</a>
+    <a href="{{ route('contacts') }}" class="hover:underline hover:text-blue-400" onclick="closeMenu()">Contacts</a>
+</div>
+
+
+
     </nav>
-    <hr class="my-4">
+
+    <hr class="border-gray-600 my-0">
 
     <!-- Main Content Section -->
-    <div class="container mx-auto">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         @yield('content')
     </div>
 
+   <!-- JavaScript for Mobile Menu -->
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    // Toggle the mobile menu visibility when the button is clicked
+    menuToggle.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');  // Toggle the 'hidden' class
+    });
+
+    // Close the mobile menu after clicking a link
+    function closeMenu() {
+        mobileMenu.classList.add('hidden');  // Hide the menu after clicking the link
+    }
+</script>
 
 </body>
-
 </html>
-

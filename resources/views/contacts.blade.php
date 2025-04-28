@@ -41,6 +41,30 @@
                         Email : <a href="mailto:meriusterry@gmail.com" class="text-blue-400 hover:underline"> meriusterry@gmail.com</a></p>
                     </div>
 
+                   
+                    
+
+                    
+                </div>
+                <div class="flex items-center justify-center text-white-700 space-x-4 mt-2">
+                        
+    
+                    <div class="flex items-center space-x-2">
+                        
+
+                        Linkedin : <a href="https://www.linkedin.com/in/merius-ntuli-a605a3166" class="text-blue-400 hover:underline"> https://www.linkedin.com/in/merius-ntuli-a605a3166</a></p>
+                    </div>
+    
+                </div>
+                <div class="flex items-center justify-center text-white-700 space-x-4 mt-2">
+                        
+    
+             
+    
+                </div>
+
+                <div class="space-x-4 hidden md:flex">
+                   
                     
                 </div>
         

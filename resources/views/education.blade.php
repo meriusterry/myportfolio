@@ -13,15 +13,24 @@
                 <div class="absolute -left-4 top-0 bg-yellow-500 w-8 h-8 rounded-full flex items-center justify-center text-white text-lg font-bold ">
                     1.
                 </div>
-                <span class="  block text-white-700 text-sm mb-1">02/2019 –  11/2023</span>
+                <span class="  block text-white-700 text-sm mb-1">02/2019 –  10/2024</span>
                 <span class="block text-white-500 text-sm mb-1">South Africa, Pretoria</span>
-                <h3 class="text-xl font-bold">Diploma : (Software Development)</h3>
+                <div class="flex items-center space-x-4">
+                    <h3 class="text-xl font-bold">Diploma : IT (Software Development) : </h3>
+                    <a href="{{ route('download.MT Ntuli Completion letter') }}" target="_blank" class=" pl-10 font-bold text-blue-600 underline hover:text-blue-800">
+                        View Certificate
+                    </a>
+                </div>
+                
                 <h4 class="text-lg font-semibold">Tshwane University of Technology</h4>
                 <ul class="list-disc pl-5 mt-2 space-y-1">
-                    <li>Trained upon fundamentals of software development by Microsoft IT Academy</li>
-                    <li>Designed a utility for file handling during the summer internship at AIR INDIA's IT Department</li>
-                    <li>Conceptualized MEDASSIST - A utility for patients' medical records. Application will contain information about a patient's medical history, previous diagnoses & medications which can be used to prevent hurdles in the effective, efficient & timely treatment of the patient's illness</li>
-                </ul>
+      
+                    <li>Development Software</li>
+                    <li>Technical Programming</li>
+                    <li>Information Systems</li>
+                    <li>Computing Fundamentals</li>
+                    <li>System Software</li>
+                    <li>Industry Exposure</li>
             </div>
             <!-- Schooling -->
      
