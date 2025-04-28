@@ -6,7 +6,7 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');;
 
-Route::get('/download-resume', function () {
+/*Route::get('/download-resume', function () {
     $filePath = storage_path('app/pdfs/Merius_Ntuli_CV.pdf');
 
     return response()->download($filePath, 'Merius_Ntuli_CV.pdf');
@@ -17,7 +17,7 @@ Route::get('/Merius_Ntuli_CV', function () {
     $path = storage_path('app/pdfs/Merius_Ntuli_CV.pdf'); // adjust if your file is somewhere else
 
     return response()->file($path);
-})->name('view.Merius_Ntuli_CV');
+})->name('view.Merius_Ntuli_CV');*/
 
 
 
@@ -45,7 +45,7 @@ Route::get('/contacts', function () {
     return view('contacts');
 })->name('contacts');
 
-Route::get('/download-resume', function () {
+/*Route::get('/download-resume', function () {
 $filePath = storage_path('app/pdfs/MT Ntuli Completion letter.pdf');
 
 return response()->download($filePath, 'MT Ntuli Completion letter.pdf');
@@ -56,4 +56,30 @@ Route::get('/MT Ntuli Completion letter', function () {
 $path = storage_path('app/pdfs/MT Ntuli Completion letter.pdf'); // adjust if your file is somewhere else
 
 return response()->file($path);
+})->name('view.MT Ntuli Completion letter');*/
+
+
+Route::get('/download-resume', function () {
+    $filePath = storage_path('app/public/pdfs/Merius_Ntuli_CV.pdf');
+
+    return response()->download($filePath, 'Merius_Ntuli_CV.pdf');
+})->name('download.Merius_Ntuli_CV');
+
+Route::get('/Merius_Ntuli_CV', function () {
+    $path = storage_path('app/public/pdfs/Merius_Ntuli_CV.pdf');
+
+    return response()->file($path);
+})->name('view.Merius_Ntuli_CV');
+
+Route::get('/download-completion-letter', function () {
+    $filePath = storage_path('app/public/pdfs/MT Ntuli Completion letter.pdf');
+
+    return response()->download($filePath, 'MT Ntuli Completion letter.pdf');
+})->name('download.MT Ntuli Completion letter');
+
+Route::get('/MT-Ntuli-Completion-letter', function () {
+    $path = storage_path('app/public/pdfs/MT Ntuli Completion letter.pdf');
+
+    return response()->file($path);
 })->name('view.MT Ntuli Completion letter');
+

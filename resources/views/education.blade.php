@@ -17,7 +17,7 @@
                 <span class="block text-white-500 text-sm mb-1">South Africa, Pretoria</span>
                 <div class="flex items-center space-x-4">
                     <h3 class="text-xl font-bold">Diploma : IT (Software Development) : </h3>
-                    <a href="{{ route('download.MT Ntuli Completion letter') }}" target="_blank" class=" pl-10 font-bold text-blue-600 underline hover:text-blue-800">
+                    <a href="{{ route('view.MT Ntuli Completion letter') }}" target="_blank" class=" pl-10 font-bold text-blue-600 underline hover:text-blue-800">
                         View Certificate
                     </a>
                 </div>
